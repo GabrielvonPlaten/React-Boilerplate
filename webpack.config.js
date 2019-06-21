@@ -1,9 +1,10 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'public', 'dist'),
     filename: 'bundle.js',
   },
   module: {
@@ -14,7 +15,11 @@ module.exports = {
     },
     {
       test: /\.s?a?c?ss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'] // multiple loaders using an array
+      use: [
+        MiniCssExtractPlugin.loader, 
+        'css-loader', 
+        'sass-loader'
+      ] // multiple loaders using an array
     },
     {
       test: /\.(png|jpg|gif)$/i,
@@ -32,7 +37,13 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    historyApiFallback: true
+    historyApiFallback: true,
+    publicPath: '/dist/'
   },
   mode: 'development',
+  plugins: [
+    new MiniCssExtractPlugin({ 
+      filename: "style.css"
+    })
+  ], 
 };
