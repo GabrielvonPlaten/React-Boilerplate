@@ -4,27 +4,37 @@ React Boilerplate made with Babel & Webpack 4
 * Axios
 * React-router
 * Scss & Sass
+* Import images
 
 ## Commands
 
 **To install**
+------
 ```
 git clone https://github.com/GabrielvonPlaten/React-Boilerplate.git
 cd React-Boilerplate
 npm / yarn install
 ```
+serve
+------
+```
+npm / yarn run serve
+```
 
-**To start the dev-server**
 
+Local server will start at **http://localhost:8080**
+
+build
+------
+```
+npm / yarn run build
+```
+
+dev-server
+------
 ```
 npm / yarn run dev-server
 ```
 
-Local server will start at **http://localhost:8080/**
-
-**Build**
-```
-npm / yarn run build
-```
 
 

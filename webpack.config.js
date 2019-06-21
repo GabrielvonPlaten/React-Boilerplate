@@ -15,7 +15,18 @@ module.exports = {
     {
       test: /\.s?a?c?ss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'] // multiple loaders using an array
-    }
+    },
+    {
+      test: /\.(png|jpg|gif)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: undefined,
+          },
+        },
+      ],
+    },
     ]
   },
   devtool: 'cheap-module-source-map',
