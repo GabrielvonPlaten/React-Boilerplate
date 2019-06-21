@@ -11,7 +11,6 @@ const Home = () => {
       <button onClick={() => setData(count - 1)}>-</button>
       <button onClick={() => setData(0)}>Reset</button>
       <p>Count: {count}</p>
-      <img src={Bg_image} alt="background image"/>
     </div>
   )
 }
