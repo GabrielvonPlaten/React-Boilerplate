@@ -5,6 +5,7 @@ React Boilerplate made with Babel & Webpack 4
 * React-router
 * Scss & Sass
 * Import images
+* js & jsx file format
 
 ## Commands
 
