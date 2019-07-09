@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Home.sass';
+import React, { useState } from "react";
+import "./Home.sass";
 
 const Home = () => {
   const [count, setData] = useState(0);
@@ -12,7 +12,7 @@ const Home = () => {
       <button onClick={() => setData(0)}>Reset</button>
       <p>Count: {count}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
